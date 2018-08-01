@@ -1,9 +1,11 @@
 import java.io.File
+import java.net.URL
 
 fun main(args: Array<String>) {
     //println("hello word")
-    writebook()
-    readbook()
+    //writebook()
+    //readbook()
+    web()
 }
 
 fun readbook(){
@@ -19,4 +21,10 @@ fun writebook(){
    file.writeText("bbbbbb\n")
    //file.appendBytes(byteArrayOf(93, 85, 74, 93))
     file.appendText("吼啊")
+}
+
+fun web(){
+    val baidu = URL("https://www.quguoyun.cn")
+    val contents = baidu.readText()
+    println(contents)
 }
